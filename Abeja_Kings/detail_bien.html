@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Détail du bien — Abeja Kings</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700|Oswald:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/theme-overrides.css">
+    <style>
+      .thumb { cursor: pointer; }
+      .property-main { border-radius: 8px; overflow: hidden; }
+      .action-btns .btn { margin-bottom: 8px; }
+      .wa-actions { margin-top: 8px; }
+      .wa-actions .btn { margin-right: 6px; }
+    </style>
+  </head>
+  <body>
+    <div class="site-wrap">
+      <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-6 col-xl-2">
+              <h1 class="mb-0 site-logo m-0 p-0"><a href="index.html" class="mb-0"><img src="images/Logo Abeja king (2).jpeg" alt="Abeja Kings" class="nav-logo">Abeja Kings</a></h1>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="container mt-5">
+        <a href="index.html" class="btn btn-outline-secondary mb-4">← Retour aux biens</a>
+
+        <div class="row">
+
+          <!-- Image principale + galerie -->
+          <div class="col-md-6">
+            <div class="property-main mb-3">
+              <img id="main-image" src="images/WhatsApp Image 2026-01-21 at 15.46.01.jpeg" class="img-fluid" alt="Image principale">
+            </div>
+            <div class="row" id="gallery">
+              <!-- vignettes injectées ici -->
+            </div>
+          </div>
+
+          <!-- Informations -->
+          <div class="col-md-6">
+            <h2 id="title">Titre du bien</h2>
+            <p class="text-muted"><span id="location"><i class="icon-location-pin"></i> Abidjan</span></p>
+            <h3 id="price" class="text-success mb-4">Prix sur demande</h3>
+
+            <hr>
+
+            <h5>Description</h5>
+            <p id="description">Description complète du bien.</p>
+
+            <hr>
+
+            <h5>Caractéristiques</h5>
+            <ul id="features">
+              <!-- list items injected -->
+            </ul>
+
+            <hr>
+
+            <div class="action-btns">
+              <a id="whatsapp-btn" href="#" class="btn btn-success btn-lg d-block">💬 Contacter sur WhatsApp</a>
+              <a id="tel-btn" href="#" class="btn btn-primary btn-lg d-block">📞 Appeler maintenant</a>
+              <div id="wa-actions" class="wa-actions" style="display:none;">
+                <button id="wa-open" type="button" class="btn btn-success">Ouvrir WhatsApp</button>
+                <button id="wa-call" type="button" class="btn btn-primary">Appeler</button>
+                <button id="wa-copy" type="button" class="btn btn-outline-secondary">Copier le numéro</button>
+              </div>
+              <small id="wa-note" class="form-text text-muted mt-2"></small>
+            </div>
+
+            <hr>
+
+            <!-- Commentaires -->
+            <div id="comments" class="comment-list pt-4 mb-4">
+              <!-- comments will be injected here -->
+            </div>
+
+            <div class="comment-form-wrap pt-4">
+              <h4 class="mb-3">Laissez un commentaire</h4>
+              <form id="comment-form" class="p-4 bg-light rounded shadow-sm">
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="cname">Nom *</label>
+                    <input type="text" class="form-control" id="cname" placeholder="Votre nom">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="cemail">Email *</label>
+                    <input type="email" class="form-control" id="cemail" placeholder="Votre email">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="cmessage">Message</label>
+                  <textarea id="cmessage" cols="30" rows="5" class="form-control" placeholder="Votre commentaire..."></textarea>
+                </div>
+                <div class="form-group text-right">
+                  <input type="submit" value="Envoyer le commentaire" class="btn btn-primary">
+                </div>
+              </form>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Google Maps -->
+        <div class="mt-5">
+          <h4>Localisation</h4>
+          <iframe id="map-frame" src="" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+
+      <footer class="site-footer mt-5">
+        <div class="container text-center py-4">
+          <p class="copyright"><small>&copy; <script>document.write(new Date().getFullYear());</script> Abeja Kings CI. Tous droits réservés.</small></p>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+    (function(){
+      var properties = {
+        "1": {
+          title: "Maison à rénover — Abidjan",
+          images: ["images/WhatsApp Image 2026-01-21 at 15.46.00.jpeg","images/WhatsApp Image 2026-01-21 at 15.46.01.jpeg","images/hero_2.jpg","images/img_1.jpg"],
+          price: "Prix sur demande",
+          location: "Motobé, Abidjan",
+          description: "Belle villa à rénover, idéale pour une famille. Proche des écoles et commerces. Travaux de rénovation possibles — devis sur demande.",
+          features: { Surface: "300 m²", Chambres: 5, Salles_de_bain: 2 },
+          phone: "+2250707066950",
+          whatsapp: "+2250707066950",
+          map_q: "Motobé, Abidjan"
+        },
+        "2": {
+          title: "Terrain à vendre — Mohame",
+          images: ["images/WhatsApp Image 2026-01-21 at 15.46.01 (1).jpeg","images/scene-construction-site-with-equipment.jpg"],
+          price: "Prix sur demande",
+          location: "Mohame",
+          description: "Terrain à vendre — parcelle prête à la construction. Contactez-nous pour plus d'informations.",
+          features: { Surface: "variable", Type: "Parcelle" },
+          phone: "+2250707066950",
+          whatsapp: "+2250707066950",
+          map_q: "Mohame, Abidjan"
+        },
+        "3": {
+          title: "Villa duplex — Résidence Abeja",
+          images: ["images/abidjan_house_2.jpg","images/WhatsApp Image 2026-01-21 at 15.46.01.jpeg"],
+          price: "Contactez-nous",
+          location: "Résidence Abeja",
+          description: "Villa duplex spacieuse située dans la Résidence Abeja. Contactez notre équipe pour organiser une visite.",
+          features: { Surface: "--", Chambres: 4 },
+          phone: "+2250707066950",
+          whatsapp: "+2250707066950",
+          map_q: "Résidence Abeja, Abidjan"
+        },
+        "4": { title: "Beau paysage — Zone rurale", images: ["images/beautiful-landscape-with-small-village.jpg","images/property_1.v2.jpg"], price: "Prix sur demande", location: "Zone rurale", description: "Terrain et paysage pittoresque, idéal pour projets résidentiels ou agricoles.", features: { Surface: "variable" }, phone: "+2250707066950", whatsapp: "+2250707066950", map_q: "Zone rurale, Abidjan" },
+        "5": { title: "Projet résidentiel — Abidjan", images: ["images/scene-construction-site-with-equipment.jpg"], price: "--", location: "Abidjan", description: "Lot de terrains pour projet résidentiel, pré-commercialisation en cours.", features: { Surface: "variable", Statut: "En vente" }, phone: "+2250707066950", whatsapp: "+2250707066950", map_q: "Abidjan" },
+        "6": { title: "Nos terrains — Yaou", images: ["images/WhatsApp Image 2026-01-21 at 15.46.01 (1).jpeg","images/beautiful-landscape-with-small-village.jpg"], price: "FCFA 20 000 000", location: "Yaou", description: "Parcelle disponible à Yaou — belle exposition et accès facile.", features: { Surface: "--" }, phone: "+2250707066950", whatsapp: "+2250707066950", map_q: "Yaou" },
+        "7": { title: "Appartement cosy — Plateau", images: ["images/img_1.jpg"], price: "12 000 000 FCFA", location: "Plateau, Abidjan", description: "Appartement 2 chambres, idéal pour jeune couple ou investissement locatif.", features: { Surface: "75 m²", Chambres: 2 }, phone: "+2250707066950", whatsapp: "+2250707066950", map_q: "Plateau, Abidjan" },
+        "8": { title: "Maison familiale — Marcory", images: ["images/client2.jpg","images/img_1.jpg"], price: "35 000 000 FCFA", location: "Marcory, Abidjan", description: "Maison prête à emménager, proche commodités et écoles.", features: { Surface: "180 m²", Chambres: 3 }, phone: "+2250707066950", whatsapp: "+2250707066950", map_q: "Marcory, Abidjan" },
+        "9": { title: "Studio centre-ville — Abidjan", images: ["images/hero_2.jpg"], price: "6 500 000 FCFA", location: "Centre-ville", description: "Studio compact, proche transports et commerces.", features: { Surface: "35 m²" }, phone: "+2250707066950", whatsapp: "+2250707066950", map_q: "Abidjan centre" },
+        "10": { title: "Résidence Abeja — Abidjan", images: ["images/property_1.v2.jpg","images/property_4.jpg"], price: "95 000 000 FCFA", location: "Abidjan", description: "Résidence neuve, finitions modernes et sécurité 24/7.", features: { Surface: "330 m²", Chambres: 5 }, phone: "+2250707066950", whatsapp: "+2250707066950", map_q: "Abidjan" },
+        "11": { title: "Terrain constructible — Abidjan", images: ["images/scene-construction-site-with-equipment.jpg"], price: "9 800 000 FCFA", location: "Abidjan", description: "Terrain prêt à bâtir, viabilisé.", features: { Surface: "600 m²" }, phone: "+2250707066950", whatsapp: "+2250707066950", map_q: "Abidjan" },
+        "12": { title: "Terrain vue vallée — Région", images: ["images/beautiful-landscape-with-small-village.jpg"], price: "18 000 000 FCFA", location: "Région", description: "Terrain offrant une belle vue et exposition.", features: { Surface: "1200 m²" }, phone: "+225707066950", whatsapp: "+225707066950", map_q: "Région Abidjan" },
+        "13": { title: "Maison de ville — Treichville", images: ["images/property_4.jpg","images/img_1.jpg"], price: "28 000 000 FCFA", location: "Treichville, Abidjan", description: "Maison confortable, proche commerces.", features: { Surface: "200 m²", Chambres: 4 }, phone: "+225707066950", whatsapp: "+225707066950", map_q: "Treichville, Abidjan" }
+      };
+
+      function qs(k){ return new URLSearchParams(window.location.search).get(k); }
+      function el(id){ return document.getElementById(id); }
+
+      var id = qs('id') || '1';
+      var p = properties[id] || properties['1'];
+
+      el('title').textContent = p.title;
+      el('main-image').src = p.images[0] || p.images;
+      el('location').textContent = p.location + ', Côte d\'Ivoire';
+      el('price').textContent = p.price || 'Prix sur demande';
+      el('description').textContent = p.description || '';
+
+      // features list
+      var f = el('features'); f.innerHTML = '';
+      Object.keys(p.features || {}).forEach(function(k){
+        var li = document.createElement('li');
+        li.textContent = k.replace(/_/g,' ') + ' : ' + p.features[k];
+        f.appendChild(li);
+      });
+
+      // gallery
+      var g = el('gallery'); g.innerHTML = '';
+      (p.images || []).forEach(function(src){
+        var col = document.createElement('div'); col.className = 'col-4 mb-2';
+        var img = document.createElement('img'); img.src = src; img.className = 'img-fluid rounded thumb';
+        img.addEventListener('click', function(){ el('main-image').src = src; });
+        col.appendChild(img); g.appendChild(col);
+      });
+
+      // contact buttons
+      var phoneClean = (p.whatsapp || p.phone || '').replace(/[+\s]/g,'');
+      var whatsapp = phoneClean ? 'https://wa.me/' + phoneClean : '#';
+      el('whatsapp-btn').href = 'javascript:;';
+      el('tel-btn').href = 'tel:' + (p.phone || '');
+
+      // behaviour: show a small action panel offering Open WhatsApp / Call / Copy
+      var waActions = el('wa-actions');
+      var waOpen = document.getElementById('wa-open');
+      var waCall = document.getElementById('wa-call');
+      var waCopy = document.getElementById('wa-copy');
+      var waNote = el('wa-note');
+      if(waNote) waNote.textContent = "Si WhatsApp indique que le numéro n'est pas enregistré, veuillez appeler ou copier le numéro.";
+
+      el('whatsapp-btn').addEventListener('click', function(e){
+        e.preventDefault();
+        if(!waActions) return;
+        waActions.style.display = (waActions.style.display === 'none' || !waActions.style.display) ? 'block' : 'none';
+      });
+      if(waOpen){ waOpen.addEventListener('click', function(){ window.open(whatsapp, '_blank'); }); }
+      if(waCall){ waCall.addEventListener('click', function(){ window.location.href = 'tel:' + (p.phone || phoneClean); }); }
+      if(waCopy && navigator.clipboard){ waCopy.addEventListener('click', function(){ navigator.clipboard.writeText(p.phone || phoneClean).then(function(){ waNote.textContent = 'Numéro copié dans le presse-papiers.'; setTimeout(function(){ waNote.textContent = "Si WhatsApp indique que le numéro n'est pas enregistré, veuillez appeler ou copier le numéro."; },3000); }); }); }
+
+      // map
+      var q = encodeURIComponent(p.map_q || p.location || 'Abidjan');
+      el('map-frame').src = 'https://www.google.com/maps?q=' + q + '&output=embed';
+
+      /* ---------- Comments: load + post with API fallback to localStorage ---------- */
+      var API_BASE = window.API_BASE || '/api';
+      var commentsKey = 'comments:detail_bien:' + id;
+      var comments = JSON.parse(localStorage.getItem(commentsKey) || '[]');
+      var commentsEl = el('comments');
+
+      function escapeHtml(s){ return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+      function showAlert(type, message, container){
+        container = container || document.querySelector('.comment-form-wrap') || document.body;
+        var a = document.createElement('div');
+        a.className = 'alert alert-' + (type === 'error' || type === 'danger' ? 'danger' : 'success');
+        a.style.marginBottom = '1rem';
+        a.textContent = message;
+        container.insertBefore(a, container.firstChild);
+        setTimeout(function(){ a.remove(); }, 4500);
+      }
+
+      function renderComments(){
+        if(!commentsEl) return;
+        commentsEl.innerHTML = '';
+        if(!comments || comments.length===0){ commentsEl.innerHTML = '<p>Aucun commentaire pour l\'instant.</p>'; return; }
+        var arr = comments.slice().reverse();
+        arr.forEach(function(c){
+          var card = document.createElement('div'); card.className = 'card mb-3 p-3';
+          var date = c.date ? new Date(c.date).toLocaleString() : '';
+          card.innerHTML = '<h5 style="margin-bottom:0">'+ escapeHtml(c.name) +'</h5><div class="text-muted small mb-2">'+ escapeHtml(date) +'</div><p>'+ escapeHtml(c.message).replace(/\n/g,'<br>') +'</p>';
+          commentsEl.appendChild(card);
+        });
+      }
+
+      // try to load comments from backend, fallback to localStorage
+      fetch(API_BASE + '/comments?path=' + encodeURIComponent('/detail_bien.html?id=' + id)).then(function(res){
+        if(!res.ok) throw new Error('no api');
+        return res.json();
+      }).then(function(data){
+        comments = data || [];
+        localStorage.setItem(commentsKey, JSON.stringify(comments));
+        renderComments();
+      }).catch(function(){ renderComments(); });
+
+      var form = document.getElementById('comment-form');
+      if(form){
+        form.addEventListener('submit', function(e){
+          e.preventDefault();
+          var name = document.getElementById('cname').value.trim();
+          var email = document.getElementById('cemail').value.trim();
+          var message = document.getElementById('cmessage').value.trim();
+          if(!name || !message){ showAlert('danger','Veuillez saisir votre nom et un message.'); return; }
+          var obj = { name: name, email: email, message: message, date: new Date().toISOString(), path: '/detail_bien.html?id=' + id };
+          fetch(API_BASE + '/comments', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(obj) })
+            .then(function(res){ if(!res.ok) throw new Error('no api'); return res.json(); })
+            .then(function(saved){ comments.push(saved); localStorage.setItem(commentsKey, JSON.stringify(comments)); renderComments(); form.reset(); showAlert('success','Merci — votre commentaire a été envoyé.'); })
+            .catch(function(){ comments.push(obj); localStorage.setItem(commentsKey, JSON.stringify(comments)); renderComments(); form.reset(); showAlert('success','Commentaire enregistré localement (offline).'); });
+        });
+      }
+
+    })();
+    </script>
+  </body>
+</html>

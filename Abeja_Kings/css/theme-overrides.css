@@ -1,0 +1,230 @@
+:root {
+  /* Palette adapted from the logo: deep teal/blue and warm gold */
+  --brand-blue: #0B6A93; /* deep teal-blue */
+  --brand-blue-dark: #084F6A; /* darker shade for hover/focus */
+  --brand-orange: #F0B323; /* warm gold */
+  --brand-orange-dark: #D89D00; /* darker gold/orange */
+}
+
+/* Buttons */
+.btn-primary {
+  color: #fff !important;
+  background-color: var(--brand-blue) !important;
+  border-color: var(--brand-blue) !important;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: var(--brand-blue-dark) !important;
+  border-color: var(--brand-blue-dark) !important;
+}
+
+/* Accent (secondary) color use - orange */
+.text-accent,
+.bg-accent,
+.badge-accent {
+  color: #fff !important;
+  background-color: var(--brand-orange) !important;
+  border-color: var(--brand-orange) !important;
+}
+
+/* Ensure Bootstrap 'warning' utilities use brand orange */
+.text-warning { color: var(--brand-orange) !important; }
+.bg-warning { background-color: var(--brand-orange) !important; }
+.badge-warning { background-color: var(--brand-orange) !important; color: #fff !important; }
+.btn-warning { background-color: var(--brand-orange) !important; border-color: var(--brand-orange) !important; color: #fff !important; }
+.btn-warning:hover, .btn-warning:focus { background-color: var(--brand-orange-dark) !important; border-color: var(--brand-orange-dark) !important; }
+.btn-outline-warning { color: var(--brand-orange) !important; border-color: var(--brand-orange) !important; }
+.btn-outline-warning:hover, .btn-outline-warning:focus { background-color: var(--brand-orange) !important; color: #fff !important; border-color: var(--brand-orange) !important; }
+
+/* Replace residual turquoise focus/outline with brand blue */
+.btn:focus, .btn.focus, .btn:active:focus, .btn:active.focus { box-shadow: 0 0 0 0.2rem rgba(0, 102, 204, 0.15) !important; }
+.btn-outline-primary.focus, .btn-outline-primary:focus { box-shadow: 0 0 0 0.2rem rgba(0, 102, 204, 0.15) !important; }
+
+/* Replace generic outline-glow that used turquoise in bootstrap */
+*:focus { outline-color: var(--brand-blue) !important; }
+
+
+/* Links and highlights */
+a,
+.ftco-nav a,
+.site-navbar a {
+  color: var(--brand-blue) !important;
+}
+a:hover,
+.ftco-nav a:hover,
+.site-navbar a:hover {
+  color: var(--brand-orange) !important;
+}
+
+/* Navbar background and brand */
+.site-navbar {
+  background-color: #fff !important;
+}
+.site-logo {
+  color: var(--brand-blue) !important;
+}
+
+/* Logo in navbar */
+.nav-logo {
+  height: 34px;
+  width: auto;
+  display: inline-block;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+/* Form inputs focus */
+input:focus,
+textarea:focus,
+.form-control:focus {
+  border-color: var(--brand-blue) !important;
+  box-shadow: 0 0 0 0.2rem rgba(0, 102, 204, 0.15) !important;
+}
+
+/* Hero/buttons that need orange accent */
+.btn-warning,
+.btn-accent {
+  background-color: var(--brand-orange) !important;
+  border-color: var(--brand-orange) !important;
+  color: #fff !important;
+}
+.btn-warning:hover,
+.btn-accent:hover {
+  background-color: var(--brand-orange-dark) !important;
+  border-color: var(--brand-orange-dark) !important;
+}
+
+/* Small utility helpers */
+.text-primary-custom { color: var(--brand-blue) !important; }
+.text-accent-custom { color: var(--brand-orange) !important; }
+
+/* Splash overlay styles */
+.splash-overlay {
+  position: fixed;
+  inset: 0;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  transition: opacity 400ms ease, visibility 400ms ease;
+}
+.splash-overlay.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.splash-inner { text-align: center; }
+.splash-logo,
+.splash-logo-img {
+  display: block;
+  margin: 0 auto 10px;
+  transform: scale(.85);
+  opacity: 0;
+  animation: splash-zoom 1200ms ease forwards;
+}
+.splash-logo { /* fallback text style */
+  font-family: 'Oswald', sans-serif;
+  font-size: 3.2rem;
+  color: var(--brand-blue);
+  letter-spacing: .06em;
+}
+.splash-logo-img { /* image style */
+  max-width: 360px;
+  width: 60%;
+  height: auto;
+}
+.splash-tagline {
+  margin: 0;
+  color: var(--brand-orange);
+  font-size: 1.25rem;
+  opacity: 0;
+  animation: splash-fade 1200ms 300ms ease forwards;
+}
+.splash-skip {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background: transparent;
+  border: 2px solid rgba(0,0,0,0.08);
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #333;
+}
+
+@keyframes splash-zoom {
+  0% { transform: scale(.75); opacity: 0; }
+  60% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+@keyframes splash-fade {
+  0% { opacity: 0; transform: translateY(6px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Aggressive overrides to remove Bootstrap 'turquoise' (teal/cyan) usages */
+:root {
+  --primary: var(--brand-blue) ;
+  --teal: var(--brand-blue) ;
+  --cyan: var(--brand-blue) ;
+  --info: var(--brand-blue) ;
+}
+
+/* Utilities and components that used turquoise */
+.bg-primary, .btn-primary, .badge-primary, .page-item.active .page-link, .nav-pills .nav-link.active, .progress-bar, .list-group-item.active, .list-group-flush .list-group-item.active {
+  background-color: var(--brand-blue) !important;
+  border-color: var(--brand-blue) !important;
+  color: #fff !important;
+}
+.text-primary, a.text-primary, a.text-primary:focus, a.text-primary:hover {
+  color: var(--brand-blue) !important;
+}
+.border-primary { border-color: var(--brand-blue) !important; }
+
+/* Replace info/teal/cyan utilities */
+.bg-info, .btn-info, .badge-info, .text-info, .btn-outline-info, .page-link.info {
+  background-color: var(--brand-blue) !important;
+  border-color: var(--brand-blue) !important;
+  color: #fff !important;
+}
+.text-info { color: var(--brand-blue) !important; }
+
+/* Focus/outline glows that used rgba(55,207,162,..) */
+.btn:focus, .btn.focus, .btn:active:focus, .btn:active.focus,
+.form-control:focus, .custom-file-input:focus~.custom-file-label, .page-link:focus, .page-link:active:focus,
+.btn-outline-primary.focus, .btn-outline-info.focus {
+  box-shadow: 0 0 0 0.2rem rgba(0,102,204,0.25) !important;
+  outline-color: var(--brand-blue) !important;
+}
+
+/* Input / custom control checked/active colors */
+.custom-control-input:checked~.custom-control-label:before,
+.custom-checkbox .custom-control-input:checked~.custom-control-label:before,
+.custom-radio .custom-control-input:checked~.custom-control-label:before,
+.custom-range::-webkit-slider-thumb, .custom-range::-moz-range-thumb, .custom-range::-ms-thumb {
+  background-color: var(--brand-blue) !important;
+}
+
+/* Replace box-shadows on hover states that used teal */
+.popular-category:hover .number,
+.popular-category:hover .icon,
+.listing-item .listing-item-content .category,
+.btn-outline-primary:hover,
+.btn-primary:hover {
+  background-color: var(--brand-blue) !important;
+  border-color: var(--brand-blue) !important;
+  color: #fff !important;
+}
+
+/* As last resort, neutralize direct rgba turquoises used as shadows */
+.popular-category:hover, .page-link:focus, .page-link:active, .btn:focus {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+/* Keep warning (orange) rules intact - ensure contrast */
+.btn-warning, .bg-warning, .text-warning, .badge-warning { background-color: var(--brand-orange) !important; border-color: var(--brand-orange) !important; color: #fff !important; }
+
+/* Cache-busting note: if you still see turquoise, clear browser cache or add query string to CSS link */

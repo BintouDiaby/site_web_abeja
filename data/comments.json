@@ -1,0 +1,18 @@
+{
+  "/Abeja_Kings/single.html": [
+    {
+      "name": "Test User",
+      "email": "",
+      "website": "",
+      "message": "Bonjour from test",
+      "date": "2026-02-11T23:12:55.467243Z"
+    },
+    {
+      "name": "Automated Test",
+      "email": "test@example.com",
+      "website": "",
+      "message": "Message de test via script",
+      "date": "2026-02-12T10:30:46.887622Z"
+    }
+  ]
+}

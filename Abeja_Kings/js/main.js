@@ -1,8 +1,12 @@
+/* ================================
+   AOS INIT
+================================ */
 AOS.init({
   duration: 800,
   easing: 'slide',
   once: true
 });
+
 
 jQuery(document).ready(function($) {
 
@@ -14,16 +18,20 @@ jQuery(document).ready(function($) {
 
 var siteMenuClone = function() {
 
+  // Clone menu desktop vers mobile
   $('.js-clone-nav').each(function() {
     var $this = $(this);
-    $this.clone().attr('class', 'site-nav-wrap').appendTo('.site-mobile-menu-body');
+    $this.clone().attr('class', 'site-nav-wrap')
+      .appendTo('.site-mobile-menu-body');
   });
 
+  // Ouvrir / Fermer menu
   $('body').on('click', '.js-menu-toggle', function(e) {
     e.preventDefault();
     $('body').toggleClass('offcanvas-menu');
   });
 
+  // Fermer menu si clic extérieur
   $(document).mouseup(function(e) {
     var container = $(".site-mobile-menu");
     if (!container.is(e.target) && container.has(e.target).length === 0) {
@@ -60,33 +68,46 @@ siteCarousel();
 ================================ */
 
 var siteSticky = function() {
-  $(".js-sticky-header").sticky({topSpacing:0});
+  $(".js-sticky-header").sticky({ topSpacing: 0 });
 };
 siteSticky();
 
 
 /* ================================
-   SMOOTH SCROLL (SECTIONS ONLY)
+   SMART NAVIGATION FIX
 ================================ */
 
-var OnePageNavigation = function() {
+var NavigationFix = function() {
 
-  $("body").on("click", "a[href^='#']", function(e) {
+  $("body").on("click", "a", function(e) {
 
-    var hash = this.hash;
+    var href = $(this).attr("href");
 
-    if ($(hash).length) {
-      e.preventDefault();
+    if (!href) return;
 
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 600, 'easeInOutExpo');
+    // Smooth scroll uniquement pour vraies sections
+    if (href.startsWith("#") && href.length > 1) {
+
+      var target = $(href);
+
+      if (target.length) {
+        e.preventDefault();
+
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 600, 'easeInOutExpo');
+
+        // Fermer menu mobile après clic
+        $('body').removeClass('offcanvas-menu');
+      }
     }
+
+    // Sinon → laisser Django rediriger normalement
 
   });
 
 };
-OnePageNavigation();
+NavigationFix();
 
 
 /* ================================
@@ -124,6 +145,7 @@ siteScroll();
 ================================ */
 
 document.addEventListener('DOMContentLoaded', function(){
+
   var splash = document.getElementById('splash-overlay');
   if(!splash) return;
 
@@ -134,7 +156,10 @@ document.addEventListener('DOMContentLoaded', function(){
     setTimeout(function(){ splash.remove(); }, 500);
   }
 
-  skip && skip.addEventListener('click', hideSplash);
+  if(skip){
+    skip.addEventListener('click', hideSplash);
+  }
 
   setTimeout(hideSplash, 2200);
+
 });

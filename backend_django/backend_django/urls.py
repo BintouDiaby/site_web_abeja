@@ -4,6 +4,16 @@ from django.http import JsonResponse
 from django.conf import settings
 from django.views.static import serve
 import os
+Vfrom django.http import HttpResponse
+from django.urls import path
+
+def home(request):
+    return HttpResponse("SITE OK")
+
+urlpatterns = [
+    path("", home),   # 👈 IMPORTANT
+]
+
 
 def health(request):
     return JsonResponse({'status': 'ok'})

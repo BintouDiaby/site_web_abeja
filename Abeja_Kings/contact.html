@@ -24,7 +24,6 @@
                 <li><a href="index.html#home-section" class="nav-link">Accueil</a></li>
                 <li><a href="listings.html" class="nav-link">Annonces</a></li>
                 <li><a href="services.html" class="nav-link">Services</a></li>
-                <li><a href="index.html#agents-section" class="nav-link">Équipe</a></li>
                 <li><a href="index.html#about-section" class="nav-link">À propos</a></li>
                 <li><a href="index.html#news-section" class="nav-link">Actualités</a></li>
                 <li><a href="contact.html" class="nav-link active">Contact</a></li>
@@ -97,16 +96,35 @@
               <p class="mb-0 font-weight-bold">Adresse</p>
               <p class="mb-4">Grand-Bassam, Côte d'Ivoire</p>
               <p class="mb-0 font-weight-bold">Téléphone</p>
-              <p class="mb-4"><a href="tel:+2250707066950">+2250707066950</a></p>
+              <p class="mb-4">
+                <a href="tel:+33767343830">0033767343830</a><br>
+                <a href="tel:+2250748869094">002250748869094</a>
+              </p>
               <p class="mb-0 font-weight-bold">Email</p>
-              <p class="mb-0"><a href="mailto:contact@abejakings.ci">contact@abejakings.ci</a></p>
+              <p class="mb-0"><a href="mailto:Abejakings@gmail.com">Abejakings@gmail.com</a></p>
               <div class="mt-3 action-btns">
                 <a id="whatsapp-btn" href="#" class="btn btn-success btn-lg d-block">💬 Contacter sur WhatsApp</a>
-                <a id="tel-btn" href="tel:+2250707066950" class="btn btn-primary btn-lg d-block mt-2">📞 Appeler maintenant</a>
+                <a id="email-btn" href="#" class="btn btn-info btn-lg d-block mt-2">✉️ Envoyer un email</a>
+                <a id="tel-btn" href="tel:+2250769897611" class="btn btn-primary btn-lg d-block mt-2">📞 Appeler maintenant</a>
+                <div class="social-promo visible prominent mt-3 text-center" role="region" aria-label="Bloc réseaux sociaux">
+                  <p class="mb-2" style="font-weight:700;font-size:1.05rem;">Retrouvez-nous aussi sur Instagram et TikTok</p>
+                  <p class="mb-0" style="font-size:0.95rem;">
+                    <a id="contact-instagram" href="https://www.instagram.com/abeja_kings?igsh=M3l5ZWF1dTZkdTAy&utm_source=qr" target="_blank" rel="noopener" class="mr-3 social-icon" aria-label="Instagram Abeja Kings"><span class="icon-instagram" aria-hidden="true"></span></a>
+                    <a id="contact-tiktok" href="https://www.tiktok.com/@abejakings1?_r=1&_t=ZS-93zt7uZNZeJ" target="_blank" rel="noopener" class="social-icon" aria-label="TikTok Abeja Kings">
+                      <img src="images/tiktok-icon.svg" alt="TikTok Abeja Kings" class="social-svg" />
+                    </a>
+                  </p>
+                </div>
                 <div id="wa-actions" class="wa-actions mt-2" style="display:none;">
                   <button id="wa-open" type="button" class="btn btn-success">Ouvrir WhatsApp</button>
+                  <button id="wa-open-ci" type="button" class="btn btn-success">WhatsApp (CI)</button>
+                  <button id="wa-open-fr" type="button" class="btn btn-success">WhatsApp (FR)</button>
                   <button id="wa-call" type="button" class="btn btn-primary">Appeler</button>
                   <button id="wa-copy" type="button" class="btn btn-outline-secondary">Copier le numéro</button>
+                </div>
+                <div id="email-actions" class="email-actions mt-2" style="display:none;">
+                  <button id="email-open" type="button" class="btn btn-info">Ouvrir le client mail</button>
+                  <button id="email-copy" type="button" class="btn btn-outline-secondary">Copier l'adresse</button>
                 </div>
                 <small id="wa-note" class="form-text text-muted mt-2"></small>
               </div>
@@ -152,10 +170,11 @@
             
             <div class="">
               <h2 class="footer-heading mb-4">Follow Us</h2>
-                <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
-                <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
-                <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
-                <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
+                                <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
+                                <a href="https://www.instagram.com/abeja_kings?igsh=M3l5ZWF1dTZkdTAy&utm_source=qr" class="pl-3 pr-3" target="_blank" rel="noopener"><span class="icon-instagram"></span></a>
+                                <a href="https://www.tiktok.com/@abejakings1?_r=1&_t=ZS-93zt7uZNZeJ" class="pl-3 pr-3" target="_blank" rel="noopener">TikTok</a>
+                                <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
+                                <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
             </div>
 
 
@@ -165,7 +184,7 @@
           <div class="col-md-12">
             <div class="border-top pt-5">
             <!-- Link back to Free-Template.co can't be removed. Template is licensed under CC BY 3.0. -->
-            <p class="copyright"><small>&copy; <script>document.write(new Date().getFullYear());</script> Abeja Kings CI. All Rights Reserved.  Design by <a href="https://free-template.co" target="_blank">Free-Template.co</a></small></p>
+            <p class="copyright"><small>&copy; <script>document.write(new Date().getFullYear());</script> Abeja Kings CI. All Rights Reserved.  Design by Bintou Diaby</small></p>
             </div>
           </div>
           
@@ -175,12 +194,17 @@
 
   </div>
 
-  <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/api.js"></script>
+  <script src="js/config.js"></script>
   <script>
     (function(){
       var form = document.getElementById('contact-form');
       if(!form) return;
+      // set action from centralized config when available
+      if(window.FORMSPREE_URL){
+        form.setAttribute('action', window.FORMSPREE_URL);
+      }
       function showAlert(type, message, container){
         container = container || document.querySelector('#contact-form') || document.body;
         var a = document.createElement('div');
@@ -193,58 +217,81 @@
 
       form.addEventListener('submit', function(e){
         e.preventDefault();
-        var action = form.getAttribute('action') || '';
         var fname = document.getElementById('fname').value || '';
         var lname = document.getElementById('lname').value || '';
         var email = document.getElementById('email').value || '';
         var subject = document.getElementById('subject').value || 'Demande depuis le site Abeja Kings';
         var message = document.getElementById('message').value || '';
-        var payload = { first_name: fname, last_name: lname, email: email, subject: subject, message: message };
-        // try to POST to local backend first
-        fetch((window.API_BASE || 'http://127.0.0.1:5000') + '/api/contact', {
-          method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload)
-        }).then(function(res){
-          if(res.ok){
-            showAlert('success','Message envoyé — merci !');
-            form.reset();
-            return;
-          }
-          throw new Error('Backend error');
-        }).catch(function(){
-          // fallback to Formspree/mailto as before
-          if(action.indexOf('your-form-id') !== -1){
-            var body = encodeURIComponent('Nom: ' + fname + ' ' + lname + '\nEmail: ' + email + '\n\n' + message);
-            var mailto = 'mailto:contact@abejakings.ci?subject=' + encodeURIComponent(subject) + '&body=' + body;
-            window.location.href = mailto;
-          } else {
-            // let browser submit if action configured
-            form.submit();
-          }
-        });
+        var body = 'Nom: ' + fname + ' ' + lname + '\nEmail: ' + email + '\n\n' + message;
+        // open WhatsApp chat with prefilled text (international format without +)
+        var waPhone = '2250769897611';
+        var text = subject + '\n\n' + body;
+        var waUrl = 'https://wa.me/' + waPhone + '?text=' + encodeURIComponent(text);
+        // try opening in new tab (desktop) or trigger app on mobile
+        try { window.open(waUrl, '_blank'); } catch (err) { window.location.href = waUrl; }
       });
     })();
   </script>
   <script>
     (function(){
-      var phone = '+2250707066950';
-      var phoneClean = phone.replace(/[+\s]/g,'');
+      // call numbers (displayed)
+      var call1 = '+33767343830';
+      var call2 = '+2250748869094';
+      // WhatsApp number (as provided)
+      var waNumber = '0769897611';
+      function normalizeWhatsAppNumber(n){
+        n = String(n).trim();
+        n = n.replace(/[^0-9]/g, '');
+        if(n.indexOf('00') === 0) n = n.replace(/^00/, '');
+        if(n.indexOf('225') === 0) return n; // already CI international
+        if(n.indexOf('0') === 0) return '225' + n; // keep the leading 0 after country code as requested
+        return n; // assume already international
+      }
+      var phoneClean = normalizeWhatsAppNumber(waNumber);
       var whatsapp = 'https://wa.me/' + phoneClean + '?text=' + encodeURIComponent('Bonjour, je vous contacte depuis le site Abeja Kings.');
+      // also prepare explicit variants (CI and FR) using the same local digits if number started with 0
+      var waRaw = String(waNumber).replace(/[^0-9]/g,'');
+      var whatsappCI = waRaw.indexOf('0') === 0 ? ('https://wa.me/225' + waRaw + '?text=' + encodeURIComponent('Bonjour, je vous contacte depuis le site Abeja Kings.')) : ('https://wa.me/225' + waRaw + '?text=' + encodeURIComponent('Bonjour, je vous contacte depuis le site Abeja Kings.'));
+      var whatsappFR = 'https://wa.me/33' + (waRaw.indexOf('0') === 0 ? waRaw : waRaw) + '?text=' + encodeURIComponent('Bonjour, je vous contacte depuis le site Abeja Kings.');
       var waBtn = document.getElementById('whatsapp-btn');
+      var emailBtn = document.getElementById('email-btn');
       var telBtn = document.getElementById('tel-btn');
       var waActions = document.getElementById('wa-actions');
+      var emailActions = document.getElementById('email-actions');
       var waOpen = document.getElementById('wa-open');
       var waCall = document.getElementById('wa-call');
       var waCopy = document.getElementById('wa-copy');
+      var emailOpen = document.getElementById('email-open');
+      var emailCopy = document.getElementById('email-copy');
       var waNote = document.getElementById('wa-note');
+      var email = 'Abejakings@gmail.com';
+      var mailto = 'mailto:' + encodeURIComponent(email) + '?subject=' + encodeURIComponent('Demande depuis le site Abeja Kings') + '&body=' + encodeURIComponent('Bonjour,%0D%0A%0D%0AJe vous contacte depuis le site Abeja Kings.%0D%0A%0D%0A');
       if(waNote) waNote.textContent = 'Contactez-nous via WhatsApp ou appelez-nous directement.';
       if(waBtn){
-        waBtn.href = 'javascript:;';
-        waBtn.addEventListener('click', function(e){ e.preventDefault(); if(!waActions) return; waActions.style.display = (waActions.style.display === 'none' || !waActions.style.display) ? 'block' : 'none'; });
+        // make main WhatsApp button open the guessed chat directly
+        waBtn.href = whatsapp;
+        waBtn.setAttribute('target','_blank');
+        waBtn.addEventListener('click', function(e){ try { window.open(whatsapp, '_blank'); } catch(err){ if(!waActions) return; waActions.style.display = (waActions.style.display === 'none' || !waActions.style.display) ? 'block' : 'none'; } });
+      }
+      var waOpenCI = document.getElementById('wa-open-ci');
+      var waOpenFR = document.getElementById('wa-open-fr');
+      if(waOpenCI){ waOpenCI.addEventListener('click', function(){ window.open(whatsappCI, '_blank'); }); }
+      if(waOpenFR){ waOpenFR.addEventListener('click', function(){ window.open(whatsappFR, '_blank'); }); }
+      if(emailBtn){
+        // Open the user's mail client directly when clicking the main email button
+        emailBtn.href = mailto;
+        emailBtn.addEventListener('click', function(e){
+          // allow normal link behavior to open mail client; also support JS fallback
+          try { window.location.href = mailto; } catch (err) { if(emailActions) emailActions.style.display = 'block'; }
+        });
       }
       if(waOpen){ waOpen.addEventListener('click', function(){ window.open(whatsapp, '_blank'); }); }
-      if(waCall){ waCall.addEventListener('click', function(){ window.location.href = 'tel:' + phone; }); }
-      if(waCopy && navigator.clipboard){ waCopy.addEventListener('click', function(){ navigator.clipboard.writeText(phone).then(function(){ if(waNote) waNote.textContent = 'Numéro copié dans le presse-papiers.'; setTimeout(function(){ if(waNote) waNote.textContent = 'Contactez-nous via WhatsApp ou appelez-nous directement.'; },3000); }); }); }
+      if(waCall){ waCall.addEventListener('click', function(){ window.location.href = 'tel:' + call1; }); }
+      if(waCopy && navigator.clipboard){ waCopy.addEventListener('click', function(){ navigator.clipboard.writeText(call1).then(function(){ if(waNote) waNote.textContent = 'Numéro copié dans le presse-papiers.'; setTimeout(function(){ if(waNote) waNote.textContent = 'Contactez-nous via WhatsApp ou appelez-nous directement.'; },3000); }); }); }
+      if(emailOpen){ emailOpen.addEventListener('click', function(){ window.location.href = mailto; }); }
+      if(emailCopy && navigator.clipboard){ emailCopy.addEventListener('click', function(){ navigator.clipboard.writeText(email).then(function(){ if(waNote) waNote.textContent = 'Adresse email copiée dans le presse-papiers.'; setTimeout(function(){ if(waNote) waNote.textContent = 'Contactez-nous via WhatsApp ou appelez-nous directement.'; },3000); }); }); }
     })();
   </script>
+  <script src="js/main.js"></script>
   </body>
 </html>

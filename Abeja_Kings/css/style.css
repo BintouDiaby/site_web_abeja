@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
 /* Image section services moderne pleine largeur et responsive */
 .services-section-modern-img {
   width: 100vw;
@@ -40,8 +42,95 @@ html {
 body {
   line-height: 1.7;
   color: gray;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-weight: 400;
-  font-size: 1rem; }
+  font-size: 1rem;
+}
+
+/* Logo text: forcer Montserrat Bold sur "Abeja Kings" */
+.site-logo a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 0.4px;
+}
+
+/* Social promo on contact page */
+.social-promo {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 420ms ease, transform 420ms ease;
+}
+.social-promo.visible {
+  opacity: 1;
+  transform: none;
+}
+.social-promo .social-icon{
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  border-radius: 6px;
+  background: #f5f5f5;
+  color: #111;
+  transition: transform .18s ease, background .18s ease;
+}
+.social-promo .social-icon:hover{ transform: translateY(-3px); background:#eee; }
+.social-promo .icon-instagram{ font-size: 18px; }
+.social-promo svg { vertical-align: middle; }
+
+/* Make social promo more visible on white panels */
+.p-4 .social-promo{ background: linear-gradient(90deg, #fff6f6, #fff); padding:12px; border-radius:8px; border:1px solid #ffdede; }
+
+/* Prominent variant for contact page to make the block very visible */
+.social-promo.prominent{
+  background: linear-gradient(180deg, #fffaf0, #ffffff);
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(212,175,55,0.18);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  display: block;
+  margin: 0.5rem 0 0;
+}
+.social-promo.prominent .social-icon{ width:44px; height:44px; line-height:44px; border-radius:8px; }
+.social-promo.prominent p{ margin:0; }
+
+/* Ensure inline SVG icons are centered and visible */
+.social-promo .social-icon{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.social-promo .social-icon svg{
+  width: 22px;
+  height: 22px;
+  display: block;
+  fill: #111; /* default icon color */
+}
+
+/* Styling for external image fallback (TikTok icon file) */
+.social-promo .social-icon img.social-svg{
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+.social-promo.prominent .social-icon svg{ fill: #d4af37; }
+
+/* Target the SVG path explicitly for broad browser coverage and higher contrast */
+.social-promo .social-icon svg path{
+  fill: #111 !important;
+  stroke: none !important;
+}
+.social-promo.prominent .social-icon svg path{
+  fill: #d4af37 !important;
+}
+/* Make the SVG icon a bit larger and centered inside its rounded background */
+.social-promo .social-icon svg{
+  width: 28px;
+  height: 28px;
+}
+.social-promo .social-icon{ padding:6px; }
 
 ::-moz-selection {
   background: #000;
@@ -2044,4 +2133,13 @@ a:hover {
   .team-card img { height: 220px; }
   .team-card .card-body { min-height: 120px; }
 }
+
+/* Hide all price labels under photos/site-wide */
+.ftco-media-1 .ftco-media-details strong,
+.property .prop-details .price,
+#price,
+.price {
+  display: none !important;
+}
+
 

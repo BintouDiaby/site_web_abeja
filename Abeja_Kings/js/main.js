@@ -163,3 +163,72 @@ document.addEventListener('DOMContentLoaded', function(){
   setTimeout(hideSplash, 2200);
 
 });
+
+
+/* Masquer uniquement les liens de navigation et éléments de menu contenant le mot "équipe"
+   (évite de masquer d'autres contenus de la page). */
+document.addEventListener('DOMContentLoaded', function(){
+  try {
+    var selectors = '.site-menu a, .js-clone-nav a, nav a, .site-navigation a';
+    document.querySelectorAll(selectors).forEach(function(a){
+      try {
+        if(/\b[eEéÉ]quipe\b/.test(a.textContent.trim())){
+          var li = a.closest('li');
+          if(li) li.style.display = 'none'; else a.style.display = 'none';
+        }
+      } catch(e){ /* ignore */ }
+    });
+  } catch (err) {
+    console.error('Masquage équipe ciblé failed', err);
+  }
+});
+
+/* Générer la liste des catégories dynamiquement à partir des articles
+   - Scanne les éléments `.post-entry[data-category]` présents sur la page
+   - Pour chaque catégorie unique, crée un lien vers le premier article trouvé */
+document.addEventListener('DOMContentLoaded', function(){
+  try {
+    var catList = document.getElementById('categories-list');
+    if(!catList) return;
+
+    var posts = document.querySelectorAll('.post-entry[data-category]');
+    var map = {};
+    posts.forEach(function(p){
+      var cat = (p.getAttribute('data-category')||'').trim();
+      if(!cat) return;
+      var linkEl = p.querySelector('h3 a') || p.querySelector('a.img-link');
+      var href = linkEl ? linkEl.getAttribute('href') : '#';
+      if(!map[cat]) map[cat] = href;
+    });
+
+    // Remplir la liste
+    catList.innerHTML = '';
+    Object.keys(map).forEach(function(cat){
+      var li = document.createElement('li');
+      var a = document.createElement('a');
+      a.href = map[cat];
+      a.textContent = cat;
+      li.appendChild(a);
+      catList.appendChild(li);
+    });
+  } catch (err) {
+    console.error('Erreur génération catégories', err);
+  }
+});
+
+/* Animation / affichage dynamique du bloc social sur la page contact */
+function revealSocialPromo(){
+  try {
+    var promo = document.querySelector('.social-promo');
+    if(!promo) return;
+    setTimeout(function(){ promo.classList.add('visible'); }, 300);
+    promo.setAttribute('aria-hidden','false');
+  } catch(e){ console.error('social-promo init error', e); }
+}
+
+if(document.readyState === 'loading'){
+  document.addEventListener('DOMContentLoaded', revealSocialPromo);
+} else {
+  // document already ready
+  revealSocialPromo();
+}

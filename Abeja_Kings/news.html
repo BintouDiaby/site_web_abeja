@@ -47,7 +47,7 @@
 								<li><a href="index.html" class="nav-link">Accueil</a></li>
 								<li><a href="listings.html" class="nav-link">Annonces</a></li>
 								<li><a href="services.html" class="nav-link">Services</a></li>
-								<li><a href="agents.html" class="nav-link">Équipe</a></li>
+                                
 								<li><a href="about.html" class="nav-link">À propos</a></li>
 								<li class="active"><a href="news.html" class="nav-link">Actualités</a></li>
 								<li><a href="contact.html" class="nav-link">Contact</a></li>
@@ -78,14 +78,14 @@
 						<h2 class="section-title">Derniers articles</h2>
 						<div class="row">
 							<div class="col-md-6 mb-4">
-								<div class="post-entry">
+								<div class="post-entry" data-category="Vente">
 									<a href="single.html" class="img-link"><img src="images/property_1.v2.jpg" alt="Article 1" class="img-fluid"></a>
 									<h3><a href="single.html">Marché immobilier à Abidjan</a></h3>
 									<p class="mb-0">Évolution des prix, quartiers porteurs et opportunités d'achat en 2026.</p>
 								</div>
 							</div>
 							<div class="col-md-6 mb-4">
-								<div class="post-entry">
+								<div class="post-entry" data-category="Location">
 									<a href="single-location.html" class="img-link"><img src="images/WhatsApp Image 2026-01-21 at 15.46.00.jpeg" alt="Article 2" class="img-fluid"></a>
 									<h3><a href="single-location.html">Conseils pour la location</a></h3>
 									<p class="mb-0">Checklist pour louer : bail, caution, état des lieux et droits du locataire.</p>
@@ -95,14 +95,14 @@
 								<hr>
 							</div>
 							<div class="col-md-6 mb-4">
-								<div class="post-entry">
+								<div class="post-entry" data-category="Rénovation">
 									<a href="single-projets.html" class="img-link"><img src="images/WhatsApp Image 2026-01-21 at 15.46.01.jpeg" alt="Article 3" class="img-fluid"></a>
 									<h3><a href="single-projets.html">Projets immobiliers récents</a></h3>
 									<p class="mb-0">Zoom sur nos chantiers : avancement, photos et bénéfices pour les acquéreurs.</p>
 								</div>
 							</div>
 							<div class="col-md-6 mb-4">
-								<div class="post-entry">
+								<div class="post-entry" data-category="Investissement">
 									<a href="single-investissement.html" class="img-link"><img src="images/beautiful-pavement-houses-surrounded-by-grassy-fields-captured-gambia-africa.jpg" alt="Article 4" class="img-fluid"></a>
 									<h3><a href="single-investissement.html">Conseils d'investissement</a></h3>
 									<p class="mb-0">Stratégies d'investissement : rendement attendu, fiscalité et risques à connaître.</p>
@@ -123,11 +123,8 @@
 								</div>
 							</form>
 							<h3 class="mb-3">Catégories</h3>
-							<ul class="list-unstyled">
-								<li><a href="#">Investissement</a></li>
-								<li><a href="#">Location</a></li>
-								<li><a href="#">Vente</a></li>
-								<li><a href="#">Rénovation</a></li>
+							<ul class="list-unstyled" id="categories-list">
+								<!-- Rempli dynamiquement par JS à partir des articles (.post-entry[data-category]) -->
 							</ul>
 						</div>
 
@@ -178,10 +175,11 @@
 						</div>
 						<div class="">
 							<h2 class="footer-heading mb-4">Follow Us</h2>
-								<a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
-								<a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
-								<a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
-								<a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
+							<a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
+							<a href="https://www.instagram.com/abeja_kings?igsh=M3l5ZWF1dTZkdTAy&utm_source=qr" class="pl-3 pr-3" target="_blank" rel="noopener"><span class="icon-instagram"></span></a>
+							<a href="https://www.tiktok.com/@abejakings1?_r=1&_t=ZS-93zt7uZNZeJ" class="pl-3 pr-3" target="_blank" rel="noopener">TikTok</a>
+							<a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
+							<a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
 						</div>
 					</div>
 				</div>

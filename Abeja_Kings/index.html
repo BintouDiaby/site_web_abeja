@@ -28,7 +28,7 @@ RSS Feed: https://feeds.feedburner.com/Free-templateco
 
     <link rel="shortcut icon" href="images/abidjan_house_1.jpg">
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,900|Oswald:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="fonts/icomoon/style.css">
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -46,7 +46,7 @@ RSS Feed: https://feeds.feedburner.com/Free-templateco
     <link rel="stylesheet" href="css/aos.css">
 
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/theme-overrides.css">
+    <link rel="stylesheet" href="css/theme-overrides.css?v=2">
     
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -133,18 +133,46 @@ RSS Feed: https://feeds.feedburner.com/Free-templateco
       </div>
   
      
-    </div>   
-    
-  </div>      
+    </div>
 
+  </div>
+
+  <div class="container quick-search-wrap">
+    <form class="quick-search" action="listings.html" method="get">
+      <div class="qs-field">
+        <label for="qs-type">Type de bien</label>
+        <select id="qs-type" name="type">
+          <option value="">Tous types</option>
+          <option value="villa">Villa</option>
+          <option value="terrain">Terrain</option>
+          <option value="maison">Maison</option>
+        </select>
+      </div>
+      <div class="qs-field">
+        <label for="qs-ville">Localisation</label>
+        <select id="qs-ville" name="ville">
+          <option value="">Toutes les villes</option>
+          <option value="motobe">Motobé</option>
+          <option value="mohame">Mohame</option>
+          <option value="abeja">Résidence Abeja</option>
+          <option value="yaou">Yaou</option>
+          <option value="grand-bassam">Grand-Bassam</option>
+        </select>
+      </div>
+      <div class="qs-submit">
+        <button type="submit" class="btn btn-primary px-4 py-2">Rechercher</button>
+      </div>
+    </form>
+  </div>
 
   <div class="site-section" id="properties-section">
       <div class="container">
         <div class="row large-gutters">
             <!-- Card 1 -->
-            <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
+            <div class="col-md-6 col-lg-4 mb-5 mb-lg-5" data-aos="fade-up">
               <div class="ftco-media-1">
                 <div class="ftco-media-1-inner">
+                  <span class="tag-badge">Villa</span>
                   <a href="detail_bien.html?id=1" class="d-inline-block mb-4"><img src="images/WhatsApp Image 2026-01-21 at 15.46.00.jpeg" alt="Maison" class="img-fluid"></a>
                   <div class="ftco-media-details">
                     <h3>5 pièces Abeja Villa</h3>
@@ -156,9 +184,10 @@ RSS Feed: https://feeds.feedburner.com/Free-templateco
             </div>
 
             <!-- Card 2 -->
-            <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
+            <div class="col-md-6 col-lg-4 mb-5 mb-lg-5" data-aos="fade-up" data-aos-delay="100">
               <div class="ftco-media-1">
                 <div class="ftco-media-1-inner">
+                  <span class="tag-badge">Terrain</span>
                   <a href="detail_bien.html?id=2" class="d-inline-block mb-4"><img src="images/WhatsApp Image 2026-01-21 at 15.46.01 (1).jpeg" alt="Terrain" class="img-fluid"></a>
                   <div class="ftco-media-details">
                     <h3>Terrain à vendre</h3>
@@ -170,9 +199,10 @@ RSS Feed: https://feeds.feedburner.com/Free-templateco
             </div>
 
             <!-- Card 3 -->
-            <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
+            <div class="col-md-6 col-lg-4 mb-5 mb-lg-5" data-aos="fade-up" data-aos-delay="200">
               <div class="ftco-media-1">
                 <div class="ftco-media-1-inner">
+                  <span class="tag-badge">Villa</span>
                   <a href="detail_bien.html?id=3" class="d-inline-block mb-4"><img src="images/abidjan_house_2.jpg" alt="Villa" class="img-fluid"></a>
                   <div class="ftco-media-details">
                     <h3>Villa duplex</h3>
@@ -184,9 +214,10 @@ RSS Feed: https://feeds.feedburner.com/Free-templateco
             </div>
 
             <!-- Card 4 -->
-            <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
+            <div class="col-md-6 col-lg-4 mb-5 mb-lg-5" data-aos="fade-up">
               <div class="ftco-media-1">
                 <div class="ftco-media-1-inner">
+                  <span class="tag-badge">Terrain</span>
                   <a href="detail_bien.html?id=4" class="d-inline-block mb-4"><img src="images/beautiful-landscape-with-small-village.jpg" alt="Paysage" class="img-fluid"></a>
                   <div class="ftco-media-details">
                     <h3>Beau paysage</h3>
@@ -198,9 +229,10 @@ RSS Feed: https://feeds.feedburner.com/Free-templateco
             </div>
 
             <!-- Card 5 -->
-            <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
+            <div class="col-md-6 col-lg-4 mb-5 mb-lg-5" data-aos="fade-up" data-aos-delay="100">
               <div class="ftco-media-1">
                 <div class="ftco-media-1-inner">
+                  <span class="tag-badge">Chantier</span>
                   <a href="detail_bien.html?id=5" class="d-inline-block mb-4"><img src="images/scene-construction-site-with-equipment.jpg" alt="Chantier" class="img-fluid"></a>
                   <div class="ftco-media-details">
                     <h3>Nos chantiers</h3>
@@ -212,9 +244,10 @@ RSS Feed: https://feeds.feedburner.com/Free-templateco
             </div>
 
             <!-- Card 6 -->
-            <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
+            <div class="col-md-6 col-lg-4 mb-5 mb-lg-5" data-aos="fade-up" data-aos-delay="200">
               <div class="ftco-media-1">
                 <div class="ftco-media-1-inner">
+                  <span class="tag-badge">Terrain</span>
                   <a href="detail_bien.html?id=6" class="d-inline-block mb-4"><img src="images/WhatsApp Image 2026-01-21 at 15.46.01 (1).jpeg" alt="Terrain 2" class="img-fluid"></a>
                   <div class="ftco-media-details">
                     <h3>Nos terrains</h3>
@@ -241,7 +274,7 @@ RSS Feed: https://feeds.feedburner.com/Free-templateco
           </div>
         </div>
         <div class="row">
-          <div class="col-md-4 text-center">
+          <div class="col-md-4 text-center" data-aos="fade-up">
             <div class="pr-5 first-step">
               <span class="text-black">01.</span>
               <span class="custom-icon flaticon-house text-black"></span>
@@ -250,7 +283,7 @@ RSS Feed: https://feeds.feedburner.com/Free-templateco
             </div>
           </div>
 
-          <div class="col-md-4 text-center">
+          <div class="col-md-4 text-center" data-aos="fade-up" data-aos-delay="150">
             <div class="pr-5 second-step">
               <span class="text-black">02.</span>
               <span class="custom-icon flaticon-coin text-black"></span>
@@ -259,7 +292,7 @@ RSS Feed: https://feeds.feedburner.com/Free-templateco
             </div>
           </div>
 
-          <div class="col-md-4 text-center">
+          <div class="col-md-4 text-center" data-aos="fade-up" data-aos-delay="300">
             <div class="pr-5">
               <span class="text-black">03.</span>
               <span class="custom-icon flaticon-home text-black"></span>
@@ -277,7 +310,7 @@ RSS Feed: https://feeds.feedburner.com/Free-templateco
       <div class="container">
         
         <div class="row large-gutters">
-          <div class="col-lg-6 mb-5">
+          <div class="col-lg-6 mb-5" data-aos="fade-right">
 
               <div class="owl-carousel slide-one-item with-dots">
                   <div><img src="images/beautiful-pavement-houses-surrounded-by-grassy-fields-captured-gambia-africa.jpg" alt="Maison Abeja Kings 1" class="img-fluid"></div>
@@ -286,7 +319,7 @@ RSS Feed: https://feeds.feedburner.com/Free-templateco
                 </div>
 
           </div>
-            <div class="col-lg-6 ml-auto"><div class="row align-items-center justify-content-center">
+            <div class="col-lg-6 ml-auto" data-aos="fade-left"><div class="row align-items-center justify-content-center">
 					<div class="col-md-8 text-center">
 						<h1 class="font-weight-light text-white">Actualités</h1>
 						<div><a href="index.html" class="text-white">Accueil</a> • <span class="text-white">Actualités</span></div>
@@ -403,7 +436,7 @@ RSS Feed: https://feeds.feedburner.com/Free-templateco
         </div>
 
         <div class="row">
-            <div class="col-md-6 mb-4">
+            <div class="col-md-6 mb-4" data-aos="fade-up">
                 <div class="ftco-testimonial-1">
                   <div class="ftco-testimonial-vcard d-flex align-items-center mb-4">
                       <img src="images/client 1.jpg" alt="Fatou cissé" class="img-fluid mr-3">
@@ -417,7 +450,7 @@ RSS Feed: https://feeds.feedburner.com/Free-templateco
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 mb-4">
+              <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
                   <div class="ftco-testimonial-1">
                       <div class="ftco-testimonial-vcard d-flex align-items-center mb-4">
                           <img src="images/client2.jpg" alt="Traore ben" class="img-fluid mr-3">
@@ -432,7 +465,7 @@ RSS Feed: https://feeds.feedburner.com/Free-templateco
                     </div>
               </div> 
 
-              <div class="col-md-6 mb-4">
+              <div class="col-md-6 mb-4" data-aos="fade-up">
                   <div class="ftco-testimonial-1">
                     <div class="ftco-testimonial-vcard d-flex align-items-center mb-4">
                         <img src="images/client 1.jpg" alt="Grace Konan" class="img-fluid mr-3">
@@ -446,7 +479,7 @@ RSS Feed: https://feeds.feedburner.com/Free-templateco
                     </div>
                   </div>
                 </div>
-                <div class="col-md-6 mb-4">
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="ftco-testimonial-1">
                         <div class="ftco-testimonial-vcard d-flex align-items-center mb-4">
                           <img src="images/client2.jpg" alt="Kouyate Junior" class="img-fluid mr-3">
@@ -474,29 +507,29 @@ RSS Feed: https://feeds.feedburner.com/Free-templateco
         </div>
 
         <div class="row">
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
             <div class="h-entry">
               <a href="single.html"><img src="images/beautiful-pavement-houses-surrounded-by-grassy-fields-captured-gambia-africa.jpg" alt="Maison — Abeja Kings" class="img-fluid"></a>
               <h2 class="font-size-regular"><a href="single.html" class="text-dark">Projets immobiliers récents</a></h2>
               <div class="meta mb-4">Terrains a vendre  <span class="mx-2">&bullet;</span> Jan 18, 2019<span class="mx-2">&bullet;</span> <a href="single.html">News</a></div>
-            </div> 
+            </div>
           </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="h-entry">
               <a href="single.html"><img src="images/WhatsApp%20Image%202026-01-21%20at%2015.46.00.jpeg" alt="Maison — Abeja Kings" class="img-fluid"></a>
               <h2 class="font-size-regular"><a href="single.html" class="text-dark">Projets immobiliers récents</a></h2>
               <div class="meta mb-4">James Phelps <span class="mx-2">&bullet;</span> Jan 18, 2019<span class="mx-2">&bullet;</span> <a href="single.html">News</a></div>
-              
+
             </div>
           </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
             <div class="h-entry">
               <a href="single.html"><img src="images/WhatsApp%20Image%202026-01-21%20at%2015.46.01.jpeg" alt="Maison de banlieue — Abeja Kings" class="img-fluid"></a>
               <h2 class="font-size-regular"><a href="single.html" class="text-dark">Projets immobiliers récents</a></h2>
               <div class="meta mb-4">Allison Holmes <span class="mx-2">&bullet;</span> Jan 18, 2019<span class="mx-2">&bullet;</span> <a href="single.html">News</a></div>
-            </div> 
+            </div>
           </div>
-          
+
         </div>
       </div>
     </section>
@@ -512,9 +545,9 @@ RSS Feed: https://feeds.feedburner.com/Free-templateco
           </div>
         </div>
         <div class="row">
-          <div class="col-md-7 mb-5">
+          <div class="col-md-7 mb-5" data-aos="fade-up">
 
-            
+
 
             <form id="contact-form" action="https://formspree.io/f/your-form-id" method="POST" class="p-5 bg-white">
               
@@ -563,8 +596,8 @@ RSS Feed: https://feeds.feedburner.com/Free-templateco
   
             </form>
           </div>
-          <div class="col-md-5">
-            
+          <div class="col-md-5" data-aos="fade-up" data-aos-delay="150">
+
             <div class="p-4 mb-3 bg-white">
               <p class="mb-0 font-weight-bold">Adresse</p>
               <p class="mb-4">Grand-Bassam, Côte d'Ivoire</p>

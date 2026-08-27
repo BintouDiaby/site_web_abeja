@@ -7,7 +7,7 @@
     <meta name="description" content="Annonces immobilières Abeja Kings — maisons, terrains et projets de rénovation en Côte d'Ivoire" />
     <link rel="shortcut icon" href="images/abidjan_house_1.jpg">
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,900|Oswald:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="fonts/icomoon/style.css">
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="css/aos.css">
 
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/theme-overrides.css">
+    <link rel="stylesheet" href="css/theme-overrides.css?v=2">
   </head>
 
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -77,6 +77,33 @@
       </div>
     </div>
 
+    <div class="container quick-search-wrap">
+      <form class="quick-search" id="listings-search" action="listings.html" method="get">
+        <div class="qs-field">
+          <label for="qs-type">Type de bien</label>
+          <select id="qs-type" name="type">
+            <option value="">Tous types</option>
+            <option value="villa">Villa</option>
+            <option value="terrain">Terrain</option>
+            <option value="maison">Maison</option>
+          </select>
+        </div>
+        <div class="qs-field">
+          <label for="qs-ville">Localisation</label>
+          <select id="qs-ville" name="ville">
+            <option value="">Toutes les villes</option>
+            <option value="motobe">Motobé</option>
+            <option value="mohame">Mohame</option>
+            <option value="abeja">Résidence Abeja</option>
+            <option value="yaou">Yaou</option>
+            <option value="grand-bassam">Grand-Bassam</option>
+          </select>
+        </div>
+        <div class="qs-submit">
+          <button type="submit" class="btn btn-primary px-4 py-2">Rechercher</button>
+        </div>
+      </form>
+    </div>
 
     <section class="site-section" id="annonces-section">
       <div class="container">
@@ -87,11 +114,12 @@
           </div>
         </div>
 
-        <div class="row">
+        <div class="row" id="annonces-list">
 
-          <div class="col-md-4 mb-4">
+          <div class="col-md-4 mb-4" data-type="villa" data-ville="motobe" data-aos="fade-up">
             <div class="ftco-media-1">
               <div class="ftco-media-1-inner">
+                <span class="tag-badge">Villa</span>
                 <a href="detail_bien.html?id=1" class="d-inline-block mb-4"><img src="images/WhatsApp Image 2026-01-21 at 15.46.00.jpeg" alt="Maison" class="img-fluid"></a>
                 <div class="ftco-media-details">
                   <h3>5 pièces Abeja Villa</h3>
@@ -102,9 +130,10 @@
             </div>
           </div>
 
-          <div class="col-md-4 mb-4">
+          <div class="col-md-4 mb-4" data-type="terrain" data-ville="mohame" data-aos="fade-up" data-aos-delay="100">
             <div class="ftco-media-1">
               <div class="ftco-media-1-inner">
+                <span class="tag-badge">Terrain</span>
                 <a href="detail_bien.html?id=2" class="d-inline-block mb-4"><img src="images/WhatsApp Image 2026-01-21 at 15.46.01 (1).jpeg" alt="Terrain" class="img-fluid"></a>
                 <div class="ftco-media-details">
                   <h3>Terrain à vendre</h3>
@@ -115,9 +144,10 @@
             </div>
           </div>
 
-          <div class="col-md-4 mb-4">
+          <div class="col-md-4 mb-4" data-type="villa" data-ville="abeja" data-aos="fade-up" data-aos-delay="200">
             <div class="ftco-media-1">
               <div class="ftco-media-1-inner">
+                <span class="tag-badge">Villa</span>
                 <a href="detail_bien.html?id=3" class="d-inline-block mb-4"><img src="images/abidjan_house_2.jpg" alt="Villa" class="img-fluid"></a>
                 <div class="ftco-media-details">
                   <h3>Villa duplex</h3>
@@ -129,6 +159,7 @@
           </div>
 
         </div>
+        <p id="annonces-empty" class="text-center text-muted" style="display:none;">Aucun bien ne correspond à ces critères pour le moment — contactez-nous, nous avons peut-être une offre non encore publiée.</p>
       </div>
     </section>
 
@@ -144,21 +175,21 @@
         </div>
 
         <div class="row">
-          <div class="col-md-4 mb-4">
+          <div class="col-md-4 mb-4" data-aos="fade-up">
             <div class="h-entry">
               <a href="single.html"><img src="images/property_1.v2.jpg" alt="Villa Moderne" class="img-fluid"></a>
               <h2 class="font-size-regular"><a href="single.html" class="text-dark">Villa Moderne</a></h2>
               <div class="meta mb-4">Cocody — Projet livré 2025</div>
             </div>
           </div>
-          <div class="col-md-4 mb-4">
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
             <div class="h-entry">
               <a href="single.html"><img src="images/scene-construction-site-with-equipment.jpg" alt="Résidence Abeja" class="img-fluid"></a>
               <h2 class="font-size-regular"><a href="single.html" class="text-dark">Résidence Abeja</a></h2>
               <div class="meta mb-4">20 logements livrés</div>
             </div>
           </div>
-          <div class="col-md-4 mb-4">
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
             <div class="h-entry">
               <a href="single.html"><img src="images/beautiful-landscape-with-small-village.jpg" alt="Lotissement Yaou" class="img-fluid"></a>
               <h2 class="font-size-regular"><a href="single.html" class="text-dark">Lotissement Yaou</a></h2>
@@ -238,6 +269,33 @@
   <script src="js/jquery.fancybox.min.js"></script>
   <script src="js/jquery.sticky.js"></script>
   <script src="js/main.js"></script>
+
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var type = params.get('type') || '';
+      var ville = params.get('ville') || '';
+      if (!type && !ville) return;
+
+      var typeSelect = document.getElementById('qs-type');
+      var villeSelect = document.getElementById('qs-ville');
+      if (typeSelect) typeSelect.value = type;
+      if (villeSelect) villeSelect.value = ville;
+
+      var cards = document.querySelectorAll('#annonces-list > [data-type]');
+      var visibleCount = 0;
+      cards.forEach(function (card) {
+        var matchesType = !type || card.getAttribute('data-type') === type;
+        var matchesVille = !ville || card.getAttribute('data-ville') === ville;
+        var show = matchesType && matchesVille;
+        card.style.display = show ? '' : 'none';
+        if (show) visibleCount++;
+      });
+
+      var empty = document.getElementById('annonces-empty');
+      if (empty) empty.style.display = visibleCount === 0 ? 'block' : 'none';
+    })();
+  </script>
 
   </body>
 </html>
